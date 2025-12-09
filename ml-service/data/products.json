@@ -1,0 +1,163 @@
+{
+    "products": [{
+            "productId": "1",
+            "name": "Wireless Headphones",
+            "description": "High-quality wireless headphones with noise cancellation",
+            "category": "Electronics",
+            "price": 3999,
+            "imageUrl": "https://via.placeholder.com/300?text=Wireless+Headphones"
+        },
+        {
+            "productId": "2",
+            "name": "Smart Watch",
+            "description": "Feature-rich smartwatch with health tracking",
+            "category": "Electronics",
+            "price": 5999,
+            "imageUrl": "https://via.placeholder.com/300?text=Smart+Watch"
+        },
+        {
+            "productId": "3",
+            "name": "USB-C Cable",
+            "description": "Durable 2-meter USB-C charging cable",
+            "category": "Electronics",
+            "price": 299,
+            "imageUrl": "https://via.placeholder.com/300?text=USB+Cable"
+        },
+        {
+            "productId": "4",
+            "name": "Cotton T-Shirt",
+            "description": "Comfortable 100% cotton t-shirt in multiple colors",
+            "category": "Clothing",
+            "price": 399,
+            "imageUrl": "https://via.placeholder.com/300?text=Cotton+TShirt"
+        },
+        {
+            "productId": "5",
+            "name": "Winter Jacket",
+            "description": "Warm winter jacket with waterproof coating",
+            "category": "Clothing",
+            "price": 2999,
+            "imageUrl": "https://via.placeholder.com/300?text=Winter+Jacket"
+        },
+        {
+            "productId": "6",
+            "name": "Python Programming Book",
+            "description": "Learn Python programming from basics to advanced",
+            "category": "Books",
+            "price": 599,
+            "imageUrl": "https://via.placeholder.com/300?text=Python+Book"
+        },
+        {
+            "productId": "7",
+            "name": "Web Development Guide",
+            "description": "Complete guide to modern web development",
+            "category": "Books",
+            "price": 799,
+            "imageUrl": "https://via.placeholder.com/300?text=Web+Dev+Book"
+        },
+        {
+            "productId": "8",
+            "name": "LED Desk Lamp",
+            "description": "Energy-efficient desk lamp with adjustable brightness",
+            "category": "Home",
+            "price": 899,
+            "imageUrl": "https://via.placeholder.com/300?text=LED+Lamp"
+        },
+        {
+            "productId": "9",
+            "name": "Yoga Mat",
+            "description": "Non-slip yoga mat, 6mm thick, eco-friendly",
+            "category": "Sports",
+            "price": 1299,
+            "imageUrl": "https://via.placeholder.com/300?text=Yoga+Mat"
+        },
+        {
+            "productId": "10",
+            "name": "Coffee Maker",
+            "description": "Automatic coffee maker with programmable timer",
+            "category": "Home",
+            "price": 2499,
+            "imageUrl": "https://via.placeholder.com/300?text=Coffee+Maker"
+        },
+        {
+            "productId": "11",
+            "name": "Premium Coffee Beans",
+            "description": "Freshly roasted arabica coffee beans, 500g",
+            "category": "Food",
+            "price": 649,
+            "imageUrl": "https://via.placeholder.com/300?text=Coffee+Beans"
+        },
+        {
+            "productId": "12",
+            "name": "Protein Powder",
+            "description": "Whey protein powder, vanilla flavor, 1kg",
+            "category": "Food",
+            "price": 1899,
+            "imageUrl": "https://via.placeholder.com/300?text=Protein+Powder"
+        },
+        {
+            "productId": "13",
+            "name": "Running Shoes",
+            "description": "Comfortable running shoes with cushioned sole",
+            "category": "Sports",
+            "price": 3499,
+            "imageUrl": "https://via.placeholder.com/300?text=Running+Shoes"
+        },
+        {
+            "productId": "14",
+            "name": "Dumbbell Set",
+            "description": "5-piece adjustable dumbbell set, 2-10kg",
+            "category": "Sports",
+            "price": 4999,
+            "imageUrl": "https://via.placeholder.com/300?text=Dumbbells"
+        },
+        {
+            "productId": "15",
+            "name": "Formal Shirt",
+            "description": "Premium cotton formal shirt, multiple colors",
+            "category": "Clothing",
+            "price": 999,
+            "imageUrl": "https://via.placeholder.com/300?text=Formal+Shirt"
+        },
+        {
+            "productId": "16",
+            "name": "Phone Screen Protector",
+            "description": "Tempered glass screen protector for smartphones",
+            "category": "Electronics",
+            "price": 199,
+            "imageUrl": "https://via.placeholder.com/300?text=Screen+Protector"
+        },
+        {
+            "productId": "17",
+            "name": "Web Design Handbook",
+            "description": "Modern web design principles and best practices",
+            "category": "Books",
+            "price": 899,
+            "imageUrl": "https://via.placeholder.com/300?text=Design+Book"
+        },
+        {
+            "productId": "18",
+            "name": "Desk Organizer",
+            "description": "Multi-compartment desk organizer for productivity",
+            "category": "Home",
+            "price": 599,
+            "imageUrl": "https://via.placeholder.com/300?text=Desk+Organizer"
+        },
+        {
+            "productId": "19",
+            "name": "Bluetooth Speaker",
+            "description": "Portable Bluetooth speaker with 360° sound",
+            "category": "Electronics",
+            "price": 1999,
+            "imageUrl": "https://via.placeholder.com/300?text=Bluetooth+Speaker"
+        },
+        {
+            "productId": "20",
+            "name": "Fitness Tracker Band",
+            "description": "Replacement band for fitness trackers",
+            "category": "Sports",
+            "price": 499,
+            "imageUrl": "https://via.placeholder.com/300?text=Fitness+Band"
+        }
+    ]
+}
