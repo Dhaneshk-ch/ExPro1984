@@ -1,106 +1,79 @@
-﻿import React from 'react';
+﻿// ProductCard Component
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 import categoryImages from "../utils/categoryImages";
 
 const ProductCard = ({ product }) => {
-  const finalImage =
-    categoryImages[product.category?.toLowerCase()] ||
-    product.imageUrl ||
-    "https://via.placeholder.com/300";
+    const { addToCart } = useContext(CartContext);
 
-  return (
-    <div className="card" style={{
-      display: 'flex',
-      flexDirection: 'column',
-      height: '100%',
-      overflow: 'hidden',
-      transition: 'box-shadow 0.3s ease, transform 0.3s ease',
-      cursor: 'pointer'
-    }}
-    onMouseEnter={(e) => {
-      e.currentTarget.style.boxShadow = '0 12px 24px rgba(17,24,39,0.15)';
-      e.currentTarget.style.transform = 'translateY(-4px)';
-    }}
-    onMouseLeave={(e) => {
-      e.currentTarget.style.boxShadow = '0 6px 18px rgba(17,24,39,0.06)';
-      e.currentTarget.style.transform = 'translateY(0)';
-    }}>
-      
-      <div style={{
-        width: '100%',
-        height: '200px',
-        overflow: 'hidden',
-        marginBottom: '16px',
-        borderRadius: '8px',
-        background: '#f3f4f6',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}>
-        <img
-          src={finalImage}
-          alt={product.name}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            transition: 'transform 0.3s ease'
-          }}
-        />
-      </div>
+    const handleAddToCart = () => {
+        addToCart(
+            {
+                id: product._id,
+                name: product.name,
+                price: product.price,
+                imageUrl: product.imageUrl,
+                category: product.category
+            },
+            1
+        );
+        alert('Product added to cart!');
+    };
 
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-        {product.category && (
-          <span style={{
-            display: 'inline-block',
-            fontSize: '12px',
-            color: '#6b7280',
-            backgroundColor: '#f3f4f6',
-            padding: '4px 8px',
-            borderRadius: '4px',
-            marginBottom: '8px'
-          }}>
-            {product.category}
-          </span>
-        )}
+    const finalImage =
+        categoryImages[product.category?.toLowerCase()] ||
+        product.imageUrl ||
+        "https://via.placeholder.com/300";
 
-        <h3 style={{
-          fontSize: '16px',
-          fontWeight: '600',
-          marginBottom: '8px',
-          color: '#111827',
-          lineHeight: '1.4',
-          display: '-webkit-box',
-          WebkitLineClamp: 2,
-          WebkitBoxOrient: 'vertical',
-          overflow: 'hidden'
-        }}>
-          {product.name}
-        </h3>
+    return (
+        <div className="product-card bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden border border-gray-300">
+            <Link to={`/product/${product._id}`}>
+                <div className="overflow-hidden h-48 bg-gray-100">
+                    <img
+                        src={finalImage}
+                        alt={product.name}
+                        className="w-full h-full object-cover hover:scale-110 transition"
+                    />
+                </div>
+            </Link>
 
-        <p style={{
-          fontSize: '13px',
-          color: '#6b7280',
-          marginBottom: '12px'
-        }}>
-          {product.description}
-        </p>
+            <div className="p-4">
+                <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                    {product.category}
+                </span>
 
-        <div style={{
-          fontSize: '20px',
-          fontWeight: '700',
-          color: 'var(--primary)',
-          marginBottom: '12px'
-        }}>
-          ₹{product.price}
+                <Link to={`/product/${product._id}`}>
+                    <h3 className="font-bold text-lg mt-2 hover:text-blue-600 transition line-clamp-2">
+                        {product.name}
+                    </h3>
+                </Link>
+
+                <p className="text-gray-600 text-sm mt-1 line-clamp-2">
+                    {product.description}
+                </p>
+
+                <div className="mt-3">
+                    <p className="text-2xl font-bold text-green-600">₹{product.price}</p>
+                    <p className="text-xs text-gray-500">
+                        {product.stock > 0 ? `${product.stock} in stock` : "Out of stock"}
+                    </p>
+                </div>
+
+                <button
+                    onClick={handleAddToCart}
+                    disabled={product.stock === 0}
+                    className={`w-full mt-4 py-2 rounded font-bold transition ${
+                        product.stock > 0
+                            ? "bg-blue-500 text-white hover:bg-blue-600"
+                            : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                    }`}
+                >
+                    {product.stock > 0 ? "Add to Cart" : "Out of Stock"}
+                </button>
+            </div>
         </div>
-
-        <button className="btn" style={{ width: '100%' }}>
-          Add to Cart
-        </button>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default ProductCard;
